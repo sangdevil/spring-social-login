@@ -1,0 +1,24 @@
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/logintest
+    username: root
+    password: ahzldqjem1!
+  jpa:
+    hibernate:
+      ddl-auto: create
+      naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    show-sql: true
+oauth:
+  kakao:
+    client_id: a50bb3d63eb1b37e14f4c7484310bb6a
+    redirect_uri: http://localhost:3000/oauth/redirected/kakao
+    client_secret: 7A5fvaPsvw5rClpsyZDYUjngohw4hcio
+    scope: profile_nickname, profile_image
+logging:
+  level:
+    org.hibernate.orm.jdbc.bind: TRACE
